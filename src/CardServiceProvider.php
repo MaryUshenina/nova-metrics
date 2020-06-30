@@ -29,6 +29,9 @@ class CardServiceProvider extends ServiceProvider
 
             Nova::script('CustomPartition', __DIR__.'/../dist/js/card.js');
             Nova::style('CustomPartition', __DIR__.'/../dist/css/card.css');
+
+            Nova::script('CustomPartitionValue', __DIR__.'/../dist/js/card.js');
+            Nova::style('CustomPartitionValue', __DIR__.'/../dist/css/card.css');
         });
     }
 
@@ -53,6 +56,10 @@ class CardServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
                 ->prefix('nova-vendor/CustomPartition')
+                ->group(__DIR__.'/../routes/api.php');
+
+        Route::middleware(['nova'])
+                ->prefix('nova-vendor/CustomPartitionValue')
                 ->group(__DIR__.'/../routes/api.php');
     }
 
