@@ -1,6 +1,6 @@
 <script>
 import { Minimum } from "laravel-nova";
-import Partitionmetric from "../../../../../nova/resources/js/components/Metrics/Partitionmetric.vue";
+import Partitionmetric from "../../../../../nova/resources/js/components/Metrics/PartitionMetric.vue";
 export default {
   extends: Partitionmetric,
 
